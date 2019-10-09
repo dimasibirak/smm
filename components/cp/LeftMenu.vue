@@ -381,6 +381,7 @@ export default {
       p {
         display: none;
       }
+      
     }
     .sidebar_menu_item + .sidebar_menu_item {
       margin-top: 10px;
@@ -480,6 +481,9 @@ export default {
   align-items: center;
   height: 65px;
   border-bottom: 1px solid #dbecfc;
+  @media (max-width: 1440px) {
+          height: 57px;
+  }
    @media (max-width: 1024px) {
      height: 54px;
      font-size: 14px;
