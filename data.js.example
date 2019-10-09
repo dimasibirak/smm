@@ -1,0 +1,14 @@
+﻿export default {
+  vk: {
+    app: '',
+    redirectUri: 'http://localhost:3000/login/',
+    display: 'page',
+    responseType: 'code',
+    v: '5.92'
+  },
+  fb: {
+    app: '',
+    redirectURI: 'http://localhost:3000/login/',
+    state: 'fb'
+  }
+}

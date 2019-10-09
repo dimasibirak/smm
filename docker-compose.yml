@@ -1,0 +1,40 @@
+version: '3'
+services:
+  frontend_app:
+    build:
+      context: .
+      dockerfile: docker/node.Dockerfile
+    image: alba2020/frontend_app
+    container_name: frontend_app
+    restart: always
+    # volumes:
+    #     - ./:/src
+    # working_dir: /src
+    tty: true
+    ports:
+      - "3000:3000"
+    environment:
+      - BASE_URL=${BASE_URL}
+    command:
+      "npm run dev"
+    # networks:
+    #   - frontend_net
+
+  # frontend_nginx:
+  #   image: nginx:1.13
+  #   container_name: frontend_nginx
+  #   ports:
+  #     - "80:80"
+  #   # environment:
+  #   #   - HOST:"0.0.0.0"
+  #   volumes:
+  #       # - ./frontend:/var/www/frontend
+  #       - ./docker/nginx/conf.d:/etc/nginx/conf.d
+  #   depends_on:
+  #       - frontend_app
+  #   networks:
+  #     - frontend_net
+
+# networks:
+#   frontend_net:
+#     driver: bridge

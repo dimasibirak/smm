@@ -1,0 +1,12 @@
+.menu() {
+  transition+: transform 0.5s ease 0s;
+  .menu-open &{
+    transform+: translateX(-300px);
+    @media (min-width: 460px){
+      transform+: translateX(-350px);
+    }
+    @media (min-width: 768px){
+      transform+: translateX(-50vw);
+    }
+  }
+}
